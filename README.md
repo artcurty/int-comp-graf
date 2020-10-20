@@ -15,5 +15,6 @@ hardware. Este tutorial procura abranger os principais conceitos e definições 
 de aplicações gráficas são apresentados como motivação para o estudo e pesquisa
 nesta área. Todos os passos do processo de visualização são descritos de forma objetiva através da apresentação de imagens. Questões em aberto e tendências para o
 desenvolvimento de aplicações gráficas também são abordadas"
+  
 <a href="https://www.inf.pucrs.br/~manssour/Publicacoes/TutorialSib2006.pdf"> Referência </a>
 </p>
