@@ -1,4 +1,4 @@
-# Pratica II
+# Pratica I
 ## Compilando e Executando um Programa OpenGL Moderno
 
 
