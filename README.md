@@ -1,7 +1,8 @@
 # Introdução à Computação Gráfica
 
-##### Repositóprio destinado a projetos de Introdução a Computação Gráfica
+### Arthur Curty Vieira
 
+##### Repositóprio destinado a projetos de Introdução a Computação Gráfica
 
 <p align="justify">
 "Computação Gráfica é a área da Ciência da Computação que estuda a
