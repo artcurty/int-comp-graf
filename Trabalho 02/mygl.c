@@ -154,5 +154,9 @@ void MyGlDraw(void)
     int GREEN_COLOR[4] = {0, 255, 0, 255};
     int BLUE_COLOR[4] = {0, 0, 255, 255};
 
-    DrawTriangle(106, 106, 406, 106, 256, 406, RED_COLOR, GREEN_COLOR, BLUE_COLOR);
+    DrawLine(106, 106, 406, 106, GREEN_COLOR, BLUE_COLOR);
+    DrawLine(406, 106, 256, 406, BLUE_COLOR, RED_COLOR);
+    DrawLine(256, 406, 106, 106, RED_COLOR, GREEN_COLOR);
 }
+
+// DrawTriangle(106, 106, 406, 106, 256, 406, RED_COLOR, GREEN_COLOR, BLUE_COLOR);
