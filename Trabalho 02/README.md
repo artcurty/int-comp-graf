@@ -54,46 +54,33 @@ Iniciando o desenvolvimento pela composição da função PutPixel(), que está 
 
 </p>
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=void%2520PutPixel(int%2520coordinateX%252C%2520int%2520coordinateY%252C%2520int%2520*RGBAColor)%250A%257B%250A%2520%2520%2520%2520for%2520(int%2520i%2520%253D%25200%253B%2520i%2520%253C%2520PIXEL_COMPONENTS%253B%2520i%252B%252B)%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520int%2520FB_COORDINATE%2520%253D%25204%2520*%2520coordinateY%2520*%2520IMAGE_WIDTH%2520%252B%25204%2520*%2520coordinateX%2520%252B%2520i%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520fb_ptr%255BFB_COORDINATE%255D%2520%253D%2520RGBAColor%255Bi%255D%253B%250A%2520%2520%2520%2520%257D%250A%257D"
-    style="width: 755px; height: 230px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/put-pixel-function.png" height="200"/>
 </p>
 <p align="justify">
 Após a impementação, foi possivel testar chamando a função passando as coordenadas que devem ter as cores que foram passadas também como parâmetro.
 </p>
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=void%2520MyGlDraw(void)%250A%257B%250A%2520%2520%2520%2520int%2520RED_COLOR%255B4%255D%2520%253D%2520%257B255%252C%25200%252C%25200%252C%2520255%257D%253B%250A%2520%2520%2520%2520int%2520GREEN_COLOR%255B4%255D%2520%253D%2520%257B0%252C%2520255%252C%25200%252C%2520255%257D%253B%250A%2520%2520%2520%2520int%2520BLUE_COLOR%255B4%255D%2520%253D%2520%257B0%252C%25200%252C%2520255%252C%2520255%257D%253B%250A%250A%2520%2520%2520%2520PutPixel(106%252C%2520406%252C%2520RED_COLOR)%253B%250A%2520%2520%2520%2520PutPixel(105%252C%2520404%252C%2520GREEN_COLOR)%253B%250A%2520%2520%2520%2520PutPixel(104%252C%2520403%252C%2520BLUE_COLOR)%253B%250A%257D"
-    style="width: 434px; height: 300px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/put-pixel.png" height="300"/>
 </p>
 <p align="justify">
 Tendo como resultado a visualização abaixo:
 </p>
 <p align="center">
-  <img src="./image/put-pixel.png" height="500"/>
+  <img src="./image/put-pixel-call.png" height="250"/>
 </p>
 <p align="justify">
 O passo seguinte foi a crição da função DrawLine(), que foi criada recebendo os parâmetros abaixo, porem por ser a maior função, não vai ser apresentada como as anteriores.
 </p>
+
 <p align="center">
-  <iframe
-  src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=void%2520DrawLine(int%2520CoordinateX0%252C%2520int%2520CoordinateY0%252C%2520int%2520CoordinateX1%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520int%2520CoordinateY1%252C%2520int%2520*ColorVertex0%252C%2520int%2520*ColorVertex1)%250A%257B%250A%2509%2509%2509%2509.%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520.%250A%257D"
-  style="width: 662px; height: 230px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
+  <img src="./image/draw-line.png" height="200"/>
+</p>
+
 <p align="justify">
 A função possui ainda uma chamada para a função abaixo, que é responsavel por retornar o valor da distancia entre dois vertices.
 </p>
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=int%2520CalculateDistance(int%2520coordinateOne%252C%2520int%2520coordinateTwo)%250A%257B%250A%2520%2520%2520%2520return%2520coordinateOne%2520-%2520coordinateTwo%253B%250A%257D"
-    style="width: 577px; height: 200px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/calculate-distance.png" height="150"/>
 </p>
 
 </p>
@@ -101,11 +88,7 @@ A função possui ainda uma chamada para a função abaixo, que é responsavel p
 Pós implementação, chmando a função, considerando que o eixo Y contem 511px e o eixo X tambémconte 511px, a formação do triangulo foi estipulada para ser centralizada, sendo assim pelos calculos os vestices seriam nos pontos (106,106), (406,406), (256,406). Usando a função DrawLine(), passando os vertices mencionados e suas respectivas cores, como é apresentado a baixo:
 </p>
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=void%2520MyGlDraw(void)%250A%257B%250A%250A%2520%2520%2520%2520int%2520RED_COLOR%255B4%255D%2520%253D%2520%257B255%252C%25200%252C%25200%252C%2520255%257D%253B%250A%2520%2520%2520%2520int%2520GREEN_COLOR%255B4%255D%2520%253D%2520%257B0%252C%2520255%252C%25200%252C%2520255%257D%253B%250A%2520%2520%2520%2520int%2520BLUE_COLOR%255B4%255D%2520%253D%2520%257B0%252C%25200%252C%2520255%252C%2520255%257D%253B%250A%250A%2520%2520%2520%2520DrawLine(106%252C%2520106%252C%2520406%252C%2520106%252C%2520GREEN_COLOR%252C%2520BLUE_COLOR)%253B%250A%2520%2520%2520%2520DrawLine(406%252C%2520106%252C%2520256%252C%2520406%252C%2520BLUE_COLOR%252C%2520RED_COLOR)%253B%250A%2520%2520%2520%2520DrawLine(256%252C%2520406%252C%2520106%252C%2520106%252C%2520RED_COLOR%252C%2520GREEN_COLOR)%253B%250A%257D%250A"
-    style="width: 569px; height: 320px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/draw-lines-call.png" height="250"/>
 </p>
 <p align="justify">
 feito isso, as imagens abaixo representam a sequência de linhas que foram apresentas até a finalização do triangulo completo.
@@ -127,21 +110,13 @@ Finalizando assim o resultado esperado, mesmo que manualmente. Mas para que o ob
 </p>
 
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=text%2Fx-csrc&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=void%2520DrawTriangle(int%2520CoordinateX0%252C%2520int%2520CoordinateY0%252C%2520int%2520CoordinateX1%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520int%2520CoordinateY1%252C%2520int%2520CoordinateX2%252C%2520int%2520CoordinateY2%252C%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520int%2520*ColorVertex0%252C%2520int%2520*ColorVertex1%252C%2520int%2520*ColorVertex2)%250A%257B%250A%2520%2520%2520%2520DrawLine(CoordinateX0%252C%2520CoordinateY0%252C%2520CoordinateX1%252C%2520CoordinateY1%252C%2520ColorVertex0%252C%2520ColorVertex1)%253B%250A%2520%2520%2520%2520DrawLine(CoordinateX1%252C%2520CoordinateY1%252C%2520CoordinateX2%252C%2520CoordinateY2%252C%2520ColorVertex1%252C%2520ColorVertex2)%253B%250A%2520%2520%2520%2520DrawLine(CoordinateX2%252C%2520CoordinateY2%252C%2520CoordinateX0%252C%2520CoordinateY0%252C%2520ColorVertex2%252C%2520ColorVertex0)%253B%250A%257D"
-    style="width: 898px; height: 230px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/drawtriangle.png" height="200"/>
 </p>
 
 Feito isso, ao executar o comando abaixo:
 
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=make%2520%2526%2526%2520.%252Fmygl"
-    style="width: 200px; height: 120px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+<img src="./image/make-exec.png" height="100"/>
 </p>
 
 <p align="justify">
@@ -159,11 +134,8 @@ Durante a execução do programa, alguns erros foram encontrados que não permit
 </p>
 
 <p align="center">
-  <iframe
-    src="https://carbon.now.sh/embed?bg=rgba(255%2C255%2C255%2C1)&t=seti&wt=none&l=application%2Fx-sh&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=6px&ph=21px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=CC%2520%253D%2520gcc%250A%250Aall%253A%250A%2509%2524(CC)%2520-Wall%2520-Wextra%2520-Wpedantic%2520-std%253Dc99%2520-O0%2520mygl.c%2520main.c%2520-lglut%2520-lGLU%2520-lGL%2520-o%2520mygl%2520-lm%250A%250Aclean%253A%250A%2509rm%2520mygl"
-    style="width: 1024px; height: 250px; border:0; transform: scale(1); overflow:hidden;"
-    sandbox="allow-scripts allow-same-origin">
-  </iframe>
+  <img src="./image/make.png" />
+</p>
 </p>
 
 #### Referências
