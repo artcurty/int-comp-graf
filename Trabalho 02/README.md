@@ -140,8 +140,8 @@ Durante a execução do programa, alguns erros foram encontrados que não permit
 
 #### Referências
 
-https://pt.wikipedia.org/wiki/Rasteriza%C3%A7%C3%A3o
-https://askubuntu.com/questions/527665/undefined-reference-to-symbol-expglibc-2-2-5
-http://disciplinas.ist.utl.pt/leic-cg/textos/livro/Rasterizacao.pdf
-http://letslearnbits.blogspot.com/2014/10/icgt1-algoritmo-de-bresenham.html
-https://letslearnbits.blogspot.com/2014/10/icgt1-interpolacao-de-cores.html
+ - https://pt.wikipedia.org/wiki/Rasteriza%C3%A7%C3%A3o
+ - https://askubuntu.com/questions/527665/undefined-reference-to-symbol-expglibc-2-2-5
+ - http://disciplinas.ist.utl.pt/leic-cg/textos/livro/Rasterizacao.pdf
+ - http://letslearnbits.blogspot.com/2014/10/icgt1-algoritmo-de-bresenham.html
+ - https://letslearnbits.blogspot.com/2014/10/icgt1-interpolacao-de-cores.html
