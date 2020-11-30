@@ -64,30 +64,54 @@ void Display(void) {
     // Seleciona o Shader Program a ser utilizado.
     glUseProgram(shader_program);
 
-    // Matriz Model ///////////////////////////////////////////////////////////
+   // Matriz Model ///////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float model_array[16] = {0.333f, 0.0f, 0.0f, 0.0f, 
-                            0.0f, 1.5f, 0.0f, 0.0f, 
+    float model_array[16] = {2.0f, 0.0f, 0.0f, 0.0f, 
+                            0.0f, 1.7f, 0.0f, 0.0f, 
                             0.0f, 0.0f, 1.0f, 0.0f, 
-                            0.0f, 0.0f, 0.0f, 1.0f};                             
+                            0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 model_mat = glm::make_mat4(model_array);
 
     // Matriz View ////////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float view_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
-                            0.0f, 1.0f, 0.0f, 0.0f, 
+    float view_array[16] = {-1.0f, 0.0f, 0.0f, 0.0f, 
+                            0.0f, -1.0f, 0.0f, 0.0f, 
                             0.0f, 0.0f, 1.0f, 0.0f, 
                             0.0f, 0.0f, 0.0f, 1.0f};
-
     glm::mat4 view_mat = glm::make_mat4(view_array);
+
+    // // Cam Vector
+    // glm::vec3 pos_cam = glm::vec3(-0.1f, 0.1f, 0.25f); 
+    // // Cam vector Up
+    // glm::vec3 up_cam = glm::vec3(0.0f, 1.0f, 0.0f);
+    // //Cam finish vector   
+    // glm::vec3 cam_final_position = glm::vec3(0.0f, 0.0f, 0.0f);
+    
+    // glm::vec3 z_cam = -glm::normalize(cam_final_position - pos_cam);
+    // glm::vec3 x_cam = glm::normalize(glm::cross(up_cam, z_cam));
+    // glm::vec3 y_cam = glm::normalize(glm::cross(z_cam, x_cam));
+
+    // float Bt_aux[16]={x_cam[0], y_cam[0], z_cam[0], 0.0f,
+    //                   x_cam[1], y_cam[1], z_cam[1], 0.0f,
+    //                   x_cam[2], y_cam[2], z_cam[2], 0.0f,
+    //                   0.0f,0.0f,0.0f, 1.0f};
+                  
+    // float T_aux[16]={1.0f, 0.0f, 0.0f, 0.0f,   
+    //                  0.0f, 1.0f, 0.0f, 0.0f,
+    //                  0.0f, 0.0f, 1.0f, 0.0f,
+    //                 -pos_cam[0], -pos_cam[1], -pos_cam[2], 1.0f};
+                 
+    // glm::mat4 T = glm::make_mat4(T_aux);
+    // glm::mat4 Bt = glm::make_mat4(Bt_aux);
+    
+    // glm::mat4 view_mat = Bt*T;
 
     // Matriz Projection //////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
     float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
                             0.0f, 1.0f, 0.0f, 0.0f, 
-                            0.0f, 0.0f, 1.0f, 0.0f, 
-                            0.0f, 0.0f, 0.0f, 1.0f};
-
+                            0.0f, 0.0f, 1.0f, -4.0f, 
+                            0.0f, 0.0f, -0.5f, 1.0f};
     glm::mat4 proj_mat = glm::make_mat4(proj_array);
 
     // Thr NDC is a left handed system, so we flip along the Z axis.
